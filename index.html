@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSIS SMPN 206 Jakarta 2024/2025</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo-osis.png" type="image/png">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#" onclick="showPage('home')">
+        <img src="images/logo-sekolah.png" alt="Logo Sekolah" width="38" height="38" class="me-2">
+        <img src="images/logo-osis.png" alt="Logo OSIS" width="38" height="38" class="me-2">
+        OSIS SMPN 206 Jakarta
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('dokumentasi')">Dokumentasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('proker')">Proker</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('bph')">BPH</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="sekbidDropdown" role="button" data-bs-toggle="dropdown">Sekbid</a>
+            <ul class="dropdown-menu" aria-labelledby="sekbidDropdown">
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',1)">Sekbid 1</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',2)">Sekbid 2</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',3)">Sekbid 3</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',4)">Sekbid 4</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',5)">Sekbid 5</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',6)">Sekbid 6</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',7)">Sekbid 7</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',8)">Sekbid 8</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',9)">Sekbid 9</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showPage('sekbid',10)">Sekbid 10</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('kontak')">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero/Home -->
+  <section id="home" class="page-section active">
+    <div class="container py-5 text-center">
+      <img src="images/logo-sekolah.png" alt="Logo Sekolah" width="85" class="mb-3">
+      <img src="images/logo-osis.png" alt="Logo OSIS" width="85" class="mb-3">
+      <h1 class="display-5 fw-bold text-blueocean">OSIS SMPN 206 Jakarta</h1>
+      <p class="lead text-darkblue">Tahun Ajaran 2024/2025</p>
+      <p class="mt-3 text-white-light">Bersama membangun karakter pelajar Indonesia yang cerdas, berakhlak, dan kreatif.</p>
+      <a href="#" class="btn btn-blueocean btn-lg mt-4 shadow" onclick="showPage('dokumentasi')">Lihat Dokumentasi</a>
+    </div>
+  </section>
+  <!-- Dokumentasi -->
+  <section id="dokumentasi" class="page-section">
+    <div class="container py-5">
+      <h2 class="text-blueocean mb-4"><i class="bi bi-images"></i> Dokumentasi Kegiatan</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="dokumentasi-list">
+        <!-- Foto dokumentasi di-generate di script.js -->
+      </div>
+      <div class="mt-4 text-end">
+        <button class="btn btn-outline-primary" onclick="editDokumentasi()">Edit Foto & Caption</button>
+      </div>
+    </div>
+  </section>
+  <!-- Proker -->
+  <section id="proker" class="page-section">
+    <div class="container py-5">
+      <h2 class="text-blueocean mb-4"><i class="bi bi-clipboard-data"></i> Program Kerja</h2>
+      <div class="row g-4" id="proker-list">
+        <!-- Proker di-generate di script.js -->
+      </div>
+      <div class="mt-4 text-end">
+        <button class="btn btn-outline-primary" onclick="editProker()">Edit/Update Proker</button>
+      </div>
+    </div>
+  </section>
+  <!-- BPH -->
+  <section id="bph" class="page-section">
+    <div class="container py-5">
+      <h2 class="text-blueocean mb-4">Badan Pengurus Harian (BPH)</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="bph-list">
+        <!-- BPH di-generate di script.js -->
+      </div>
+    </div>
+  </section>
+  <!-- Sekbid 1-10 -->
+  <section id="sekbid" class="page-section">
+    <div class="container py-5">
+      <h2 class="text-blueocean mb-4" id="sekbid-title">Sekbid X</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4" id="sekbid-list">
+        <!-- Sekbid anggota di-generate di script.js -->
+      </div>
+    </div>
+  </section>
+  <!-- Kontak -->
+  <section id="kontak" class="page-section">
+    <div class="container py-5">
+      <h2 class="text-blueocean mb-4">Kontak OSIS</h2>
+      <div class="card p-4 shadow-sm border-0">
+        <p><b>Email sekolah:</b> <span id="kontak-email">osis206@email.com</span></p>
+        <p><b>Instagram:</b> <a href="https://instagram.com/osis206" id="kontak-ig" target="_blank">@osis206</a></p>
+        <button class="btn btn-outline-dark btn-sm" onclick="editKontak()">Edit Kontak</button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-darkblue text-white-normal py-3 mt-5">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="images/logo-sekolah.png" alt="Logo Sekolah" width="32" class="me-2">
+        <img src="images/logo-osis.png" alt="Logo OSIS" width="32" class="me-2">
+        <span class="ms-2">© 2024/2025 OSIS SMPN 206 Jakarta</span>
+      </div>
+      <small>Developed by Volt-Scripter</small>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
